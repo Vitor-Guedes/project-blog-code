@@ -18,3 +18,7 @@ if (count($path) > 1) {
 
 $CURRENT_TEMPLATE = str_replace('/', '', $URL_PATH);
 $CURRENT_TEMPLATE = $CURRENT_TEMPLATE ? $CURRENT_TEMPLATE : 'home';
+
+if (!file_exists($CURRENT_TEMPLATE . '.php')) {
+    $CURRENT_TEMPLATE = '404';
+}

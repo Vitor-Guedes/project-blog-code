@@ -1,5 +1,5 @@
 <main id="post-container">
     <div class="content-container">
-        <h1 id="main-title"> Pagina de Contato </h1>
+        <h1>Ops - Página não encontrada.</h1>
     </div>
 </main>
