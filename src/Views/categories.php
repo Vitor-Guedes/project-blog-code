@@ -1,4 +1,4 @@
-<?php require_once '../data/categories.php' ;?>
+<?= component('header') ?>
 
 <main id="post-container">
     <div class="content-container">
@@ -10,3 +10,5 @@
         </ul>
     </div>
 </main>
+
+<?= component('footer') ?>

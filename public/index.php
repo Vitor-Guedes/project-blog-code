@@ -1,5 +1,17 @@
-<?php require_once('templates/header.php') ?>
+<?php
+
+define('BASE_DIR', dirname(__DIR__));
+
+require_once(BASE_DIR . '/vendor/autoload.php');
+
+try {
+    $app = new BlogCodar\App();
+
+    require(BASE_DIR . '/src/Helpers/helper.php');
     
-<?php require_once($CURRENT_TEMPLATE . '.php') ?>
-    
-<?php require_once('templates/footer.php') ?>
+    require(BASE_DIR . '/src/Routes/collection.php');
+
+    $app->run();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}

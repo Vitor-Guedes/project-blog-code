@@ -1,0 +1,19 @@
+{
+    "name": "guedes/blogcodar",
+    "description": "Implemetação mvc ao projeto de estudo",
+    "type": "project",
+    "license": "Mit",
+    "authors": [
+        {
+            "name": "Vitor Guedes",
+            "email": "vtrf2.0@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BlogCodar\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}

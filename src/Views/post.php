@@ -1,23 +1,11 @@
-<?php
-    require_once '../data/posts.php';
-    require_once '../data/categories.php';
-
-    $currentPost = [];
-    foreach ($posts as $post) {
-        if ($post['id'] == $postId) {
-            $currentPost = $post;
-            break ;
-        }
-    }
-
-?>
+<?= component('header') ?>
 
 <main id="post-container">
     <div class="content-container">
-        <h1 id="main-title"> <?= $currentPost['title'] ?> </h1>
-        <p id="post-description"> <?= $currentPost['description'] ?> </p>
+        <h1 id="main-title"> <?= $post['title'] ?> </h1>
+        <p id="post-description"> <?= $post['description'] ?> </p>
         <div class="img-container">
-            <img src="<?= $BASE_URL ?>imgs/<?= $currentPost['img'] ?>" alt="<?= $currentPost['title'] ?>">
+            <img src="<?= $app->getRoutePathByName('home') ?>imgs/<?= $post['img'] ?>" alt="<?= $post['title'] ?>">
         </div>
         <p class="post-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, enim molestias, minus pariatur nulla sunt voluptatum sequi adipisci alias iusto labore excepturi, eos odit quam asperiores dolorum ab laboriosam at!
         Dolorum obcaecati dolorem iste temporibus aspernatur quam ullam eius, qui maiores! Architecto exercitationem quis natus omnis perspiciatis sed, quae hic saepe alias magni velit eaque nihil blanditiis id necessitatibus sit.
@@ -38,7 +26,7 @@
     <aside id="nav-container">
         <h3 id="tags-title">Tags</h3>
         <ul id="tag-list">
-        <?php foreach ($currentPost['tags'] as $tag) : ?>
+        <?php foreach ($post['tags'] as $tag) : ?>
                 <li><a href="#"> <?= $tag ?> </a></li>
             <?php endforeach ; ?>
         </ul>
@@ -50,3 +38,5 @@
         </ul>
     </aside>
 </main>
+
+<?= component('footer') ?>

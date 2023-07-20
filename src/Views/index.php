@@ -1,4 +1,4 @@
-<?php require_once('../data/posts.php') ?>
+<?= component('header') ?>
 
 <main>
     <div id="title-container">
@@ -20,3 +20,5 @@
         <?php endforeach ; ?>
     </div>
 </main>
+
+<?= component('footer') ?>
